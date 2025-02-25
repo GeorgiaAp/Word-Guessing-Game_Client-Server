@@ -13,7 +13,10 @@ This is a simple word guessing game where the server sends a randomly chosen wor
 - **client.c**: Contains the client-side code.
 - **server.c**: Contains the server-side code.
 - **dictionary.txt**: Contains the list of words that the server will randomly pick from.
-- **README.md**: Documentation for the project.
+
+## Requirements:
+- C compiler (e.g. GCC)
+- Basic System Libraries
 
 ## Building and Running
 1. Compile the client and server:
@@ -23,10 +26,3 @@ This is a simple word guessing game where the server sends a randomly chosen wor
   - ./server
 3. Run the client in a seperate terminal:
   - ./client
-
-## Gameplay
-- The server will ask you for the dictionary file and send a random word.
-- The client will start guessing letters one at a time.
-- The client receives the word progress and number of tries remaining after each guess.
-- The game ends when the client either guesses the entire word or runs out of tries.
-
