@@ -1,15 +1,32 @@
-A Hangman Game Implementation Using Message Queues, Shared Memory, and Signals. 
-The project requires the creation of two different programs, one as a server and one as a client.
+# Word Guessing Game (Client-Server)
 
-Basic functions:
-Reading a dictionary from a text file and saving it to a 2D array of characters.
-Communication via message queue for the initial connection.
-Use shared memory to synchronize and share data.
-Communication between server and client through signals.
+This is a simple word guessing game where the server sends a randomly chosen word to the client, and the client tries to guess the word by guessing individual letters. The game uses shared memory for communication between the client and server, and message queues for message passing.
 
-Game:
-The server creates a message queue, allocates shared memory and connects to it.
-The client connects to the message queue and shared memory.
-The client starts the game with "hi" and receives the word information from the server.
-The server informs the client about each step of the game through signals and shared memory.
-The process is repeated until the word is found or the attempts are exhausted.
+## Features
+- Client-server architecture
+- Server sends a word with the first and last letters revealed, and the rest are replaced by dashes.
+- The client guesses one letter at a time.
+- The server validates the guess and sends updated word progress back to the client.
+- The game continues until the client guesses all letters correctly or runs out of tries.
+
+## Files
+- **client.c**: Contains the client-side code.
+- **server.c**: Contains the server-side code.
+- **dictionary.txt**: Contains the list of words that the server will randomly pick from.
+- **README.md**: Documentation for the project.
+
+## Building and Running
+1. Compile the client and server:
+  - gcc -o client client.c
+  - gcc -o server server.c
+2. Run the server in one terminal:
+  - ./server
+3. Run the client in a seperate terminal:
+  - ./client
+
+## Gameplay
+-The server will ask you for the dictionary file and send a random word.
+-The client will start guessing letters one at a time.
+-The client receives the word progress and number of tries remaining after each guess.
+-The game ends when the client either guesses the entire word or runs out of tries.
+
