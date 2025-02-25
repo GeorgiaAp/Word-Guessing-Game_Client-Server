@@ -25,8 +25,8 @@ This is a simple word guessing game where the server sends a randomly chosen wor
   - ./client
 
 ## Gameplay
--The server will ask you for the dictionary file and send a random word.
--The client will start guessing letters one at a time.
--The client receives the word progress and number of tries remaining after each guess.
--The game ends when the client either guesses the entire word or runs out of tries.
+- The server will ask you for the dictionary file and send a random word.
+- The client will start guessing letters one at a time.
+- The client receives the word progress and number of tries remaining after each guess.
+- The game ends when the client either guesses the entire word or runs out of tries.
 
